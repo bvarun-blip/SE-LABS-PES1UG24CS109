@@ -1,4 +1,4 @@
-"""Manage gym membership registration and renewal operations."""
+"""Manage gym membership registration, renewals, and roster exports."""
 
 import hashlib
 import secrets
@@ -6,8 +6,12 @@ from typing import Any, Dict, List, Optional
 
 MEMBERS: Dict[str, Dict[str, Any]] = {
     "M01": {"name": "Alex", "plan": "Gold", "months_left": 6, "fee": 600.0},
-    "M02": {"name": "Brooke", "plan": "Silver", "months_left": 1, "fee": 350.0},
-    "M03": {"name": "Chris", "plan": "Platinum", "months_left": 12, "fee": 1000.0},
+    "M02": {
+        "name": "Brooke", "plan": "Silver", "months_left": 1, "fee": 350.0
+    },
+    "M03": {
+        "name": "Chris", "plan": "Platinum", "months_left": 12, "fee": 1000.0
+    },
 }
 
 
@@ -21,8 +25,10 @@ def register_member(
     """Register a new member and optionally record the operation."""
     if member_log is None:
         member_log = []
+
     if member_id in MEMBERS or months <= 0:
         return False
+
     MEMBERS[member_id] = {
         "name": name,
         "plan": plan,
@@ -48,9 +54,11 @@ def calculate_renewal_rate(member_id: str, discount_rate: float) -> float:
     """Calculate a renewal fee using a discount between 0 and 1."""
     if not 0 <= discount_rate <= 1:
         raise ValueError("Discount rate must be between 0 and 1.")
+
     member = MEMBERS.get(member_id)
     if member is None:
         raise KeyError(f"Unknown member ID: {member_id}")
+
     return member["fee"] * (1 - discount_rate)
 
 
