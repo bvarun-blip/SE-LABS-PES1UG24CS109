@@ -1,0 +1,47 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\bvaru\Documents\Codex\2026-11-11\i-x20\work\lab7\venv\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\bvaru\Documents\Codex\2026-11-11\i-x20
+plugins: hypothesis-6.170.15
+collecting ... collected 37 items
+
+outputs/Lab 7/test_processor.py::test_extra_hours_fee_regressions[infant-20-False-0] PASSED [  2%]
+outputs/Lab 7/test_processor.py::test_extra_hours_fee_regressions[infant-21-False-14] PASSED [  5%]
+outputs/Lab 7/test_processor.py::test_extra_hours_fee_regressions[toddler-25-False-0] PASSED [  8%]
+outputs/Lab 7/test_processor.py::test_extra_hours_fee_regressions[toddler-31-False-54] PASSED [ 10%]
+outputs/Lab 7/test_processor.py::test_extra_hours_fee_regressions[preschool-35-True-0] PASSED [ 13%]
+outputs/Lab 7/test_processor.py::test_extra_hours_fee_regressions[toddler-51-True-294] PASSED [ 16%]
+outputs/Lab 7/test_processor.py::test_extra_hours_fee_regressions[infant-42-True-484] PASSED [ 18%]
+outputs/Lab 7/test_processor.py::test_fuzz_extra_hours_fee_matches_fee_rules PASSED [ 21%]
+outputs/Lab 7/test_processor.py::test_fuzz_extra_hours_fee_rejects_unknown_age_groups PASSED [ 24%]
+outputs/Lab 7/test_processor.py::test_fuzz_extra_hours_fee_rejects_non_string_age_groups PASSED [ 27%]
+outputs/Lab 7/test_processor.py::test_fuzz_extra_hours_fee_rejects_non_integer_hours PASSED [ 29%]
+outputs/Lab 7/test_processor.py::test_fuzz_extra_hours_fee_rejects_negative_hours PASSED [ 32%]
+outputs/Lab 7/test_processor.py::test_fuzz_extra_hours_fee_rejects_non_boolean_sibling_flag PASSED [ 35%]
+outputs/Lab 7/test_processor.py::test_enrolment_regressions[12-0-True-True] PASSED [ 37%]
+outputs/Lab 7/test_processor.py::test_enrolment_regressions[11-5-True-False] PASSED [ 40%]
+outputs/Lab 7/test_processor.py::test_enrolment_regressions[5-5-False-False] PASSED [ 43%]
+outputs/Lab 7/test_processor.py::test_enrolment_regressions[6-1-False-True] PASSED [ 45%]
+outputs/Lab 7/test_processor.py::test_enrolment_regressions[6-0-False-False] PASSED [ 48%]
+outputs/Lab 7/test_processor.py::test_fuzz_enrolment_allowed_matches_enrolment_rules PASSED [ 51%]
+outputs/Lab 7/test_processor.py::test_fuzz_enrolment_rejects_negative_age PASSED [ 54%]
+outputs/Lab 7/test_processor.py::test_fuzz_enrolment_rejects_negative_vacancies PASSED [ 56%]
+outputs/Lab 7/test_processor.py::test_fuzz_enrolment_rejects_non_integer_counts PASSED [ 59%]
+outputs/Lab 7/test_processor.py::test_fuzz_enrolment_rejects_non_boolean_pending_flag PASSED [ 62%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[20-True-False-on_time] PASSED [ 64%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[19-True-False-late] PASSED [ 67%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[4-True-False-overdue] PASSED [ 70%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[10-False-False-on_time] PASSED [ 72%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[9-False-False-late] PASSED [ 75%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[-6-False-False-overdue] PASSED [ 78%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[30-True-True-on_time] PASSED [ 81%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[20-True-True-late] PASSED [ 83%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[14-True-True-overdue] PASSED [ 86%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[20-False-True-on_time] PASSED [ 89%]
+outputs/Lab 7/test_processor.py::test_pickup_status_regressions[10-False-True-late] PASSED [ 91%]
+outputs/Lab 7/test_processor.py::test_fuzz_pickup_status_matches_cutoff_rules PASSED [ 94%]
+outputs/Lab 7/test_processor.py::test_fuzz_pickup_status_rejects_non_integer_minutes PASSED [ 97%]
+outputs/Lab 7/test_processor.py::test_fuzz_pickup_status_rejects_non_boolean_flags PASSED [100%]
+
+============================= 37 passed in 6.44s ==============================

@@ -1,0 +1,4 @@
+Daycare fee processor demo
+Extra-hours fee (toddler, 31 hours, no sibling): $54
+Enrolment (24 months, 2 vacancies, no pending immunisation): True
+Pickup (19 minutes left, aftercare, weekday): late

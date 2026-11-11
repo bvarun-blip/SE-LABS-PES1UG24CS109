@@ -1,0 +1,17 @@
+Lab 6 baseline: fuzz-discovered validation failures
+
+Input: extra_hours_fee('toddler', 31, 'false')
+Observed return: 9
+Expected validation: TypeError for a non-boolean sibling flag
+
+Input: enrolment_allowed(True, 1, False)
+Observed return: False
+Expected validation: TypeError for a boolean age count
+
+Input: pickup_status(19.5, True, False)
+Observed return: 'late'
+Expected validation: TypeError for fractional minutes
+
+Input: extra_hours_fee('toddler', '31', False)
+Observed exception: TypeError: '<' not supported between instances of 'str' and 'int'
+Expected validation: a clear validation error for non-integer hours
